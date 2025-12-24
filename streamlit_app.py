@@ -256,8 +256,7 @@ with tab2:
                 with col4:
                     st.text(f"📂 {reminder['category']}")
                 
-                if reminder["notes"]:
-                    st.markdown(f"**Notes:** {reminder['notes']}")
+                if "notes" in reminder and pd.notna(reminder["notes"]) and reminder["notes"]:
                 
                 st.markdown(f"*Created: {reminder['created_at'][:10]}*")
                 
