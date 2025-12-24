@@ -39,7 +39,7 @@ def load_reminders():
         return pd.read_csv(CSV_FILE)
     return pd.DataFrame(columns=[
         "reminder_id", "raw_input", "title", "category",
-        "date", "time", "priority", "status", "created_at"
+        "date", "time", "priority", "notes", "status", "created_at"
     ])
 
 def save_reminder_to_csv(reminder_data):
